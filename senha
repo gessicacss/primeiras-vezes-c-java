@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class senha {
+	public static void main (String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int contador = 0;
+
+		System.out.println("Insira sua senha:");
+		String senha = sc.next();
+		System.out.println("Confirme sua senha:");
+		String confsenha = sc.next();
+		
+		while (!senha.contentEquals(confsenha) && contador < 2) {
+			System.out.println("Senha incorreta.");
+			contador++;
+			System.out.println("Digite novamente sua senha:");
+			confsenha = sc.next();
+		}
+		if (contador == 2) {
+			System.out.println("Número de tentativas excedidas.");
+		}
+		else {
+			System.out.println("Bem vindo!");
+		}
+		sc.close();
+}
+}
