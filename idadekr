@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class idadekr {
+	public static void main (String[] args) {
+	Scanner sc = new Scanner (System.in);
+	
+	System.out.println("Qual o ano atual?");
+	int anoatual = sc.nextInt();
+	System.out.println("Qual o ano em que nasceu?");
+	int anonasc = sc.nextInt();
+	int idadekr = 1;
+	
+	for (int i=0; i<anonasc; i++) {
+		idadekr = anoatual - anonasc + 1;
+	}
+	
+	System.out.print("Sua idade coreana é:" + idadekr);
+	
+	sc.close();
+}
+}
